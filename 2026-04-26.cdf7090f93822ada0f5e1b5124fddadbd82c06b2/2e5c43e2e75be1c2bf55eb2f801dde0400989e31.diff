@@ -1707,3 +1707,25 @@ index f1730c059afa..e47cff101ac8 100644
    // we need to translate outer to inner sizes).
    SyncAttributesToWidget();
    LoadPersistentWindowState();
+diff --git a/browser/components/BrowserComponents.manifest b/browser/components/BrowserComponents.manifest
+index d91f7fd2dedb..bbb9ae2398f5 100644
+--- a/browser/components/BrowserComponents.manifest
++++ b/browser/components/BrowserComponents.manifest
+@@ -30,7 +30,7 @@
+ 
+ category browser-window-before-initial-xul-layout resource://gre/modules/LightweightThemeConsumer.sys.mjs LightweightThemeConsumer.init
+ category browser-window-before-initial-xul-layout moz-src:///browser/themes/ToolbarIconColor.sys.mjs ToolbarIconColor.init
+-category browser-window-before-initial-xul-layout chrome://browser/content/browser-customtitlebar.js CustomTitlebar.init
++category browser-window-before-initial-xul-layout chrome://browser/content/browser-tabsintitlebar.js TabsInTitlebar.init
+ 
+ category browser-window-domcontentloaded-before-tabbrowser resource:///modules/BrowserDOMWindow.sys.mjs BrowserDOMWindow.setupInWindow
+ category browser-window-domcontentloaded resource:///modules/BrowserWindowTracker.sys.mjs BrowserWindowTracker.track
+@@ -44,7 +44,7 @@
+ category browser-window-delayed-startup moz-src:///browser/components/search/SearchUIUtils.sys.mjs SearchUIUtils.init
+ category browser-window-delayed-startup resource:///modules/taskbartabs/TaskbarTabsPageAction.sys.mjs TaskbarTabsPageAction.init
+ 
+-category browser-window-unload-begin chrome://browser/content/browser-customtitlebar.js CustomTitlebar.uninit
++category browser-window-unload-begin chrome://browser/content/browser-tabsintitlebar.js TabsInTitlebar.uninit
+ category browser-window-unload-begin moz-src:///browser/themes/ToolbarIconColor.sys.mjs ToolbarIconColor.uninit
+ 
+ category browser-window-unload resource:///modules/BrowserDOMWindow.sys.mjs BrowserDOMWindow.teardownInWindow
